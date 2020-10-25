@@ -1,7 +1,6 @@
 # Awal kode
 print("Program menghitung rata-rata dengan array di python")
 print("===================================================")
-print("test")
 
 array = []
 jumlah = 0
