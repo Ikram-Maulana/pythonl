@@ -8,6 +8,7 @@ class SinglyLinkedList:
         self._head = None
         self._size = 0
 
+    # Untuk Output
     def __str__(self):
         result = ""
         pointer = self._head
@@ -16,6 +17,7 @@ class SinglyLinkedList:
             pointer = pointer.nextNode
         return result
 
+    # Menambahkan Node di paling awal
     def add_first(self, element):
         newNode = self._Node(element)
         newNode.nextNode = self._head
@@ -29,11 +31,11 @@ class SinglyLinkedList:
 
 def main():
     myList = SinglyLinkedList()
-    myList.add_first(3)
-    myList.add_first(6)
-    myList.add_first(30)
+    myList.add_first(2020)
+    myList.add_first(10)
+    myList.add_first(27)
     print(str(myList))
-    print(len(myList))
+    print("Panjang Node: %d" % (len(myList)))
 
 
 main()
