@@ -1,0 +1,13 @@
+import networkx as nx
+G = nx.MultiDiGraph()
+G.add_nodes_from(['A', 'B', 'C', 'D', 'E'])
+G.add_edge('A', 'B', 5)
+G.add_edge('B', 'C', 4)
+G.add_edge('C', 'D', 8)
+G.add_edge('D', 'C', 8)
+G.add_edge('D', 'E', 6)
+G.add_edge('A', 'D', 5)
+G.add_edge('C', 'E', 2)
+G.add_edge('E', 'B', 3)
+G.add_edge('A', 'E', 7)
+print nx.dijkstra_path_length(G, source='A', target='C')

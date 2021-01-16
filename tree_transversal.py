@@ -1,6 +1,7 @@
-# Binary Tree python by
+# Python Tree Transversal by
 # Ikram Maulana
 # 1930511075
+# Teknik Informatika 3B
 
 # Kelas yang merepresentasikan Node
 class Node:
@@ -9,7 +10,7 @@ class Node:
         self.right = None
         self.data = data
 
-    # Traverse Preorder (Root, Left, Right)
+    # Transversal Preorder (Root, Kiri, Kanan)
     def PreOrder(self):
         print(self.data, end=' ')
         if self.left:
@@ -17,7 +18,7 @@ class Node:
         if self.right:
             self.right.PreOrder()
 
-    # Traverse Inorder (Left, Root, Right)
+    # Transversal Inorder (Kiri, Root, Kanan)
     def InOrder(self):
         if self.left:
             self.left.InOrder()
@@ -25,7 +26,7 @@ class Node:
         if self.right:
             self.right.InOrder()
 
-    # Traverse Postorder (Left, Right, Root)
+    # Transversal Postorder (Kiri, Kanan, Root)
     def PostOrder(self):
         if self.left:
             self.left.PostOrder()
@@ -40,15 +41,17 @@ root.left = Node(int(input("Masukan Nilai Child kiri of Root: ")))
 root.right = Node(int(input("Masukan Nilai Child kanan of Root: ")))
 root.left.left = Node(int(input("Masukan Nilai Child kiri of Kiri: ")))
 root.left.right = Node(int(input("Masukan Nilai Child kanan of Kiri: ")))
+root.right.left = Node(int(input("Masukan Nilai Child Kiri of Kanan: ")))
+root.right.right = Node(int(input("Masukan Nilai Child Kanan of Kanan: ")))
 
 # Print
-print("==========================================")
-print("Tree Python by Ikram Maulana || 1930511075")
-print("==========================================")
+print("===============================================")
+print("Tree Transversal by Ikram Maulana || 1930511075")
+print("===============================================")
 print("Preorder Traversal: ", end="")
 root.PreOrder()
-print("\nInorder Traversal: ", end="")
-root.InOrder()
 print("\nPostorder Traversal: ", end="")
 root.PostOrder()
-print("\n==========================================")
+print("\nInorder Traversal: ", end="")
+root.InOrder()
+print("\n=============================================")
